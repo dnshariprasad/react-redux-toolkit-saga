@@ -1,9 +1,10 @@
-// src/redux/store.js
-import { createStore } from "redux";
-import rootReducer from "./rootReducer";
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./counterSlice";
 
-export type RootState = ReturnType<typeof rootReducer>;
-
-const store = createStore(rootReducer);
+const store = configureStore({
+  reducer: {
+    counter: counterReducer, // Registering counter slice
+  },
+});
 
 export default store;
