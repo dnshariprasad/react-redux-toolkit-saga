@@ -6,12 +6,11 @@ import {
   incrementByTen,
   decrementByTen,
   reset,
-} from "./redux/actions";
-import { RootState } from "./redux/store";
+} from "./redux/counterSlice";
 
 function App() {
   const dispatch = useDispatch();
-  const count = useSelector((state: RootState) => state.counter.count);
+  const count = useSelector((state: any) => state.counter.value);
 
   return (
     <div>
@@ -24,10 +23,10 @@ function App() {
       >
         -1
       </button>
-      <button onClick={() => dispatch(incrementByTen())}>+10</button>
+      <button onClick={() => dispatch(incrementByTen(10))}>+10</button>
       <button
         onClick={() => {
-          dispatch(decrementByTen());
+          dispatch(decrementByTen(10));
         }}
       >
         -10
