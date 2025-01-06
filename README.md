@@ -4,7 +4,6 @@
 ## master - React counter app without redux.
 1. Create Actions
 2. Create Reducer
-3. 
 ## creact-redux - React counter app with redux.
 ## creact-redux-toolkit - React counter app with redux-toolkit.
 
